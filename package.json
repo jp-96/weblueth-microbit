@@ -19,7 +19,7 @@
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "prepare-none": "npm run build",
+    "prepare": "npm run build",
     "start:pages": "npx parcel --no-cache --target pages",
     "build:pages": "npx parcel build --no-cache --no-source-maps --target pages"
   },
