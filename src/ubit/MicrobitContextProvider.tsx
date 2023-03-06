@@ -1,5 +1,5 @@
 import React from 'react';
-import { WbxContextProvider } from '../wbx/WbxContext'
+import { WbxContextProvider } from 'weblueth'
 import { getServices, requestMicrobit } from 'microbit-web-bluetooth';
 
 type Props = {

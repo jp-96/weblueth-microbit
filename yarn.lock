@@ -1554,6 +1554,17 @@ weak-lru-cache@^1.2.2:
   resolved "https://registry.yarnpkg.com/weak-lru-cache/-/weak-lru-cache-1.2.2.tgz#fdbb6741f36bae9540d12f480ce8254060dccd19"
   integrity sha512-DEAoo25RfSYMuTGc9vPJzZcZullwIqRDSI9LOy+fkCJPi6hykCnfKaXTuPBDuXAUcqHXyOgFtHNp/kB2FjYHbw==
 
+"weblueth@https://github.com/jp-96/weblueth.git":
+  version "0.0.0"
+  resolved "https://github.com/jp-96/weblueth.git#96aa0a7919e11b8945f746def560770db40dd13a"
+  dependencies:
+    "@types/react" "^18.0.28"
+    "@types/web-bluetooth" "~0.0.5"
+    "@xstate/react" "^3.2.1"
+    react "^18.2.0"
+    react-dom "^18.2.0"
+    xstate "^4.37.0"
+
 xstate@^4.37.0:
   version "4.37.0"
   resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.37.0.tgz#2f253ccbfc2dc6954ff975b8102714bde9751726"

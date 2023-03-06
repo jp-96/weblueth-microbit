@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { WbxCustomEventCallback, WbxServiceProps } from '../wbx/WbxContext';
-import { WbBoundCallback } from '../wb/WbContext';
-import { WbxServices } from '../wbx/WbxServices';
+import { WbBoundCallback, WbxCustomEventCallback, WbxServiceProps, WbxServices } from 'weblueth';
 import { DfuControlService } from 'microbit-web-bluetooth/types/services/dfu-control';
 import { Services } from 'microbit-web-bluetooth';
 

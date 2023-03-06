@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { WbxCustomEventCallback, WbxServiceProps } from '../wbx/WbxContext';
-import { WbBoundCallback } from '../wb/WbContext';
-import { WbxServices } from '../wbx/WbxServices';
+import { WbBoundCallback, WbxCustomEventCallback, WbxServiceProps, WbxServices } from 'weblueth';
 import { TemperatureService } from 'microbit-web-bluetooth/types/services/temperature';
 import { Services } from 'microbit-web-bluetooth';
 
