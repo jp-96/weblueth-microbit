@@ -16,7 +16,6 @@
     }
   },
   "scripts": {
-    "weblueth": "yarn add https://github.com/jp-96/weblueth.git",
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
@@ -43,7 +42,8 @@
     "parcel": "^2.8.3",
     "process": "^0.11.10",
     "tslib": "^2.5.0",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "weblueth": "yarn add https://github.com/jp-96/weblueth.git"
   },
   "dependencies": {
     "@types/react": "^18.0.28",
