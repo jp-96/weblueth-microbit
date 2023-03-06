@@ -31,7 +31,8 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
       - name: Clean Install
-        run: yarn install --immutable --immutable-cache --check-cache --inline-builds
+        #run: yarn install --immutable --immutable-cache --check-cache --inline-builds
+        run: yarn install
       - name: Build
         run: yarn build:pages
       - name: Setup Pages
