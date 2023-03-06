@@ -17,7 +17,7 @@
   },
   "scripts": {
     "weblueth": "yarn add https://github.com/jp-96/weblueth.git",
-    "build": "yarn weblueth && yarn build:esm && yarn build:cjs",
+    "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "prepare": "npm run build",
