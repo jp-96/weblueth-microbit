@@ -14,7 +14,7 @@ export default function MicrobitAcc() {
     const tdStyle:React.CSSProperties = {width: "150px", textAlign: "right"}
     
     return (
-        <div className={"microbit-acc"}>
+        <div className="microbit-acc">
             <MicrobitAccelerometer onAccelerometerDataChanged={onDataChanged} accelerometerPeriod={frequency} />
             <table>
                 <tr><th>X:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
