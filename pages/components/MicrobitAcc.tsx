@@ -11,15 +11,15 @@ export default function MicrobitAcc() {
         setAcc({ x: event.detail.x, y: event.detail.y, z: event.detail.z })
     }
     
-    const tdStyle:React.CSSProperties = {width: "60px", textAlign: "right"}
+    const tdStyle:React.CSSProperties = {width: "150px", textAlign: "right"}
     
     return (
         <div>
             <MicrobitAccelerometer onAccelerometerDataChanged={onDataChanged} accelerometerPeriod={frequency} />
             <table>
                 <tr><th>X:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
-                <tr><th>Y:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
-                <tr><th>Z:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
+                <tr><th>Y:</th><td style={tdStyle}>{acc.y.toFixed(3)}</td></tr>
+                <tr><th>Z:</th><td style={tdStyle}>{acc.z.toFixed(3)}</td></tr>
             </table>
             <br />
             <button onClick={() => setFrequency(160)}>SLOW</button>
