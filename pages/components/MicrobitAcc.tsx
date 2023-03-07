@@ -10,11 +10,17 @@ export default function MicrobitAcc() {
     const onDataChanged: WbxCustomEventCallback<AccelerometerData> = (event) => {
         setAcc({ x: event.detail.x, y: event.detail.y, z: event.detail.z })
     }
-
+    
+    const tdStyle:React.CSSProperties = {width: "60px", textAlign: "right"}
+    
     return (
         <div>
             <MicrobitAccelerometer onAccelerometerDataChanged={onDataChanged} accelerometerPeriod={frequency} />
-            X: {Math.abs(acc.x).toFixed(3)}, Y: {Math.abs(acc.y).toFixed(3)}, Z: {Math.abs(acc.z).toFixed(3)}
+            <table>
+                <tr><th>X:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
+                <tr><th>Y:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
+                <tr><th>Z:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
+            </table>
             <br />
             <button onClick={() => setFrequency(160)}>SLOW</button>
             <button onClick={() => setFrequency(20)}>FAST</button>
