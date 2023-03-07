@@ -17,7 +17,7 @@ export default function MicrobitBtn(props: Props) {
     const onButtonBStateChanged = props.button === 'b' ? handler : undefined;
 
     const onServiceBound: WbBoundCallback<ButtonService> = async bound => {
-        setState('-');
+        setState(bound.binding ? 0 : '-');
     };
 
     return (

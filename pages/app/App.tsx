@@ -23,17 +23,16 @@ function App() {
         >
           Learn React
         </a>
-        <MicrobitContextProvider connectionName={"micro:bit"}>
-          <p>
+          <MicrobitContextProvider connectionName={"micro:bit"}>
+            <p>
             <MicrobitConn />
-            <br/>
-            micro:bit Name: <MicrobitName /><br/>
+            <br />
+            micro:bit Name: <MicrobitName /><br />
             Button A: <MicrobitBtn button='a' /> Button B: <MicrobitBtn button='b' />
-            <br/>
+            </p>
             Accelerometer
-            <MicrobitAcc/>
-          </p>
-        </MicrobitContextProvider>
+            <MicrobitAcc />
+          </MicrobitContextProvider>
       </header>
     </div>
   );

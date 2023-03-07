@@ -24,12 +24,12 @@ export default function MicrobitConn() {
     }
 
     return (
-        <div>
+        <React.Fragment>
             {connectionName + ": [" + state.toStrings() + "]"}<br />
             <button onClick={reset}>RESET</button>
             <button onClick={request}>REQUEST</button>
             <button onClick={connect}>CONNECT</button>
             <button onClick={disconnect}>DISCONNECT</button>
-        </div>
+        </React.Fragment>
     );
 }

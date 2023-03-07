@@ -10,20 +10,24 @@ export default function MicrobitAcc() {
     const onDataChanged: WbxCustomEventCallback<AccelerometerData> = (event) => {
         setAcc({ x: event.detail.x, y: event.detail.y, z: event.detail.z })
     }
-    
-    const tdStyle:React.CSSProperties = {width: "150px", textAlign: "right"}
-    
+
+    const tblStyle: React.CSSProperties = { marginLeft: 'auto', marginRight: 'auto' };
+    const tdStyle: React.CSSProperties = { width: "80px", textAlign: "right" };
+
     return (
-        <div className="microbit-acc">
+        <React.Fragment>
             <MicrobitAccelerometer onAccelerometerDataChanged={onDataChanged} accelerometerPeriod={frequency} />
-            <table>
-                <tr><th>X:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
-                <tr><th>Y:</th><td style={tdStyle}>{acc.y.toFixed(3)}</td></tr>
-                <tr><th>Z:</th><td style={tdStyle}>{acc.z.toFixed(3)}</td></tr>
+            <table style={tblStyle}>
+                <tbody>
+                    <tr><th>X:</th><td style={tdStyle}>{acc.x.toFixed(3)}</td></tr>
+                    <tr><th>Y:</th><td style={tdStyle}>{acc.y.toFixed(3)}</td></tr>
+                    <tr><th>Z:</th><td style={tdStyle}>{acc.z.toFixed(3)}</td></tr>
+                </tbody>
             </table>
-            <br />
-            <button onClick={() => setFrequency(160)}>SLOW</button>
-            <button onClick={() => setFrequency(20)}>FAST</button>
-        </div>
+            <p>
+                <button onClick={() => setFrequency(160)}>SLOW</button>
+                <button onClick={() => setFrequency(20)}>FAST</button>
+            </p>
+        </React.Fragment>
     );
 }
